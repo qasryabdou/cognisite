@@ -74,28 +74,6 @@ public class RegistrationEmailNotification implements RegistrationNotification {
 
 		// StringBuilder vcf = new StringBuilder();
 		StringBuilder emailBody = new StringBuilder();
-		//
-		// vcf.append("BEGIN:VCARD");
-		// vcf.append("\nVERSION:3.0");
-		// vcf.append("\nN:" + registration.getNom() + ";"
-		// + registration.getPrenom() + ";;;");
-		// vcf.append("\nFN:" + registration.getNom() + " "
-		// + registration.getPrenom());
-		// vcf.append("\nORG:" + registration.getCompagnie() + ";");
-		// vcf.append("\nEMAIL;type=INTERNET;type=WORK;type=pref:"
-		// + registration.getEmail());
-		// vcf.append("\nTEL;type=CELL;type=pref:" + registration.getMobile());
-		// vcf.append("\nitem1.ADR;type=WORK;type=pref:;;;"
-		// + registration.getVille() + ";;;Morocco");
-		// vcf.append("\nitem1.X-ABADR:ma");
-		// vcf.append("\nNOTE:Niveau = " + registration.getNiveau()
-		// + "\\nCours = " + registration.getCours() + "\\nReferant = "
-		// + registration.getReferrant());
-		// vcf.append("\nEND:VCARD");
-		//
-		// LOGGER.debug(mailingConfiguration.toString());
-		// LOGGER.debug(vcf.toString());
-		//
 		
 		emailBody.append(registration);
 		LOGGER.debug(emailBody.toString());
