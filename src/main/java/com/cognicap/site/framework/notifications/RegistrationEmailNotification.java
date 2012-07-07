@@ -21,7 +21,9 @@ import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.mail.Message;
+import javax.mail.MessagingException;
 import javax.mail.Multipart;
+import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
@@ -118,6 +120,10 @@ public class RegistrationEmailNotification implements RegistrationNotification {
 					mailingConfiguration.getUsername(),
 					mailingConfiguration.getPassword());
 			t.sendMessage(message, message.getAllRecipients());
+		} catch (NoSuchProviderException nspe) {
+			LOGGER.error("No such Transport Exception.", nspe);
+		} catch (MessagingException me) {
+			LOGGER.error("Exception of type MessageException.", me);
 		} catch (Exception e) {
 			LOGGER.error("Exception while sending email the registration.", e);
 		} finally {

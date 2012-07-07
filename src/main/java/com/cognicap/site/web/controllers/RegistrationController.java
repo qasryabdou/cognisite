@@ -50,6 +50,7 @@ public class RegistrationController extends SimpleFormController {
 			throws Exception {
 
 		Registration registration = (Registration) command;
+		LOGGER.info("New registration received." + registration);
 		try {
 			registrationNotifier.publish(registration);
 		} catch (Exception ex) {
