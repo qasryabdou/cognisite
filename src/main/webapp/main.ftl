@@ -104,5 +104,5 @@
 </div>
 </div>
 <!-- START FOOTER -->
-<iframe src="http://www.facebook.com/plugins/likebox.php?href=facebook.com%2Fformations&amp;layout=standard&amp;show_faces=true&amp;width=500&amp;action=like&amp;font=tahoma&amp;header=false&amp;colorscheme=light&amp;height=180" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:180px;" allowTransparency="true"></iframe>
+<!--<iframe src="http://www.facebook.com/plugins/likebox.php?href=facebook.com%2Fformations&amp;layout=standard&amp;show_faces=true&amp;width=500&amp;action=like&amp;font=tahoma&amp;header=false&amp;colorscheme=light&amp;height=180" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:180px;" allowTransparency="true"></iframe> -->
 <#include "footer.ftl">

@@ -34,6 +34,7 @@ import com.cognicap.site.framework.notifications.RegistrationNotifier;
  * @since 0.1
  */
 
+@SuppressWarnings("deprecation")
 public class RegistrationController extends SimpleFormController {
 
 	/**
