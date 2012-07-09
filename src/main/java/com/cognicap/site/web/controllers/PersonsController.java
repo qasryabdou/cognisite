@@ -25,7 +25,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.cognicap.site.service.PersonRepository;
+import com.cognicap.site.repository.PersonRepository;
 
 /**
  * @version $Id$
@@ -50,9 +50,9 @@ public class PersonsController {
 		PersonRepository personRepository = context
 				.getBean(PersonRepository.class);
 
-		// cleanup person collection before insertion
-		personRepository.dropPersonCollection();
-
+//		// cleanup person collection before insertion
+//		personRepository.dropPersonCollection();
+//
 		// create person collection
 		personRepository.createPersonCollection();
 
