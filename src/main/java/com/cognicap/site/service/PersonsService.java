@@ -15,39 +15,36 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.cognicap.site.web.controllers;
+package com.cognicap.site.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.stereotype.Service;
 
-import com.cognicap.site.service.PersonsService;
+import com.cognicap.site.common.persistence.domain.Person;
+import com.cognicap.site.repository.PersonRepository;
 
 /**
  * @version $Id$
  * @since 0.9
  */
-@Controller
-public class PersonsController {
+@Service
+public class PersonsService {
 
 	@Autowired
-	PersonsService personsService;
+	PersonRepository personRepository;
 
-	static final Logger logger = LoggerFactory
-			.getLogger(PersonsController.class);
+	public void loadDB() {
 
-	@RequestMapping("/Persons")
-	public ModelAndView helloMongo() {
-		
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("persons");
+		personRepository.createPersonCollection();
 
-		personsService.loadDB();
-		mav.addObject("persons", personsService.getAllPersons());
+		for (int i = 0; i < 20; i++) {
+			personRepository.insertPersonWithNameJohnAndRandomAge();
+		}
+	}
 
-		return mav;
+	public List<Person> getAllPersons() {
+		return personRepository.getAllPersons();
 	}
 }

@@ -55,5 +55,21 @@
         <a target="_blank" href="http://freemarker.org"><img class="centeredImage" src="img/poweredby_big_ffffff.png" alt="Powered by FreeMarker" border="0"></a>&nbsp;
     </p>
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="3rdparty/jquery.validate.min.js"></script>
+<script type="text/javascript" src="3rdparty/jquery-ui-1.8.5.custom.min.js"></script>
+<script type="text/javascript" src="js/cognisite.js"></script>
+
+<!-- scripts concatenated and minified via build script -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var _gaq=[['_setAccount','UA-22247116-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+<!-- end scripts -->
 </body>
 </html>
