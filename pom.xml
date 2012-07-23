@@ -1,117 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>cognicap</groupId>
-	<artifactId>website</artifactId>
-	<packaging>war</packaging>
+	<groupId>com.cognicap.codemy</groupId>
+	<artifactId>codemy</artifactId>
+	<packaging>pom</packaging>
 	<version>0.9-SNAPSHOT</version>
-	<name>Cognicap Webapp</name>
+	<name>Cognicap Codemy</name>
 	<url>http://www.cognicap.com</url>
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>6.0.35</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>3.1.1.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>3.1.1.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>mail</artifactId>
-			<version>1.4.5</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.activation</groupId>
-			<artifactId>activation</artifactId>
-			<version>1.1-rev-1</version>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.16</version>
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.6.12</version>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.18</version>
-		</dependency>
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.19</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.6.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>3.1.1.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>3.1.1.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>a_vcard.android</groupId>
-			<artifactId>a_vcard</artifactId>
-			<version>1.4</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/android-vcard.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-			<version>2.8.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.0.2.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib</artifactId>
-			<version>2.2.2</version>
-		</dependency>
-	</dependencies>
+	<scm>
+	  <connection>scm:git:git://github.com/cognicap/cognisite.git</connection>
+	  <developerConnection>scm:git:git@github.com:cognicap/cognisite.git</developerConnection>
+	  <url>http://www.github.com/cognicap/cognisite</url>
+	</scm>
+	<modules>
+	    <module>cognisite-core</module>
+        <module>cognisite-ws</module>
+        <module>cognisite-webapp</module>
+	</modules>
 	<build>
 		<finalName>cognicap.com</finalName>
 	</build>
@@ -119,7 +24,4 @@
 		<name>Cognicap</name>
 		<url>www.cognicap.com</url>
 	</organization>
-	<scm>
-		<url>http://www.github.com/cognicap</url>
-	</scm>
 </project>
