@@ -13,9 +13,9 @@
 	  <url>http://www.github.com/cognicap/cognisite</url>
 	</scm>
 	<modules>
-	    <module>cognisite-core</module>
-        <module>cognisite-ws</module>
-        <module>cognisite-webapp</module>
+		<module>codemy-core</module>
+        	<module>codemy-ws</module>
+        	<module>codemy-webapp</module>
 	</modules>
 	<build>
 		<finalName>cognicap.com</finalName>
