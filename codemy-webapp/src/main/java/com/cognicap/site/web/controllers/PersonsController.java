@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.cognicap.site.service.PersonsService;
@@ -39,7 +40,7 @@ public class PersonsController {
 	static final Logger logger = LoggerFactory
 			.getLogger(PersonsController.class);
 
-	@RequestMapping("/Persons")
+	@RequestMapping(value={ "/Persons", "/Persons/*" }, method = RequestMethod.GET)
 	public ModelAndView helloMongo() {
 		
 		ModelAndView mav = new ModelAndView();

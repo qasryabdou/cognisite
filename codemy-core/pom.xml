@@ -1,22 +1,21 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-	    <groupId>com.cognicap.codemy</groupId>
-	    <artifactId>codemy</artifactId>
-	    <version>0.9-SNAPSHOT</version>
-    </parent>
-  	<groupId>com.cognicap.codemy.core</groupId>
-    <artifactId>codemy-core</artifactId>
-    <name>codemy-core</name>
-    <packaging>jar</packaging>
-    <version>0.9-SNAPSHOT</version>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.cognicap.codemy</groupId>
+		<artifactId>codemy</artifactId>
+		<version>0.9-SNAPSHOT</version>
+	</parent>
+	<groupId>com.cognicap.codemy.core</groupId>
+	<artifactId>codemy-core</artifactId>
+	<name>codemy-core</name>
+	<packaging>jar</packaging>
+	<version>0.9-SNAPSHOT</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -54,7 +53,7 @@
 			<artifactId>spring-context</artifactId>
 			<version>3.1.1.RELEASE</version>
 		</dependency>
- 		<dependency>
+		<dependency>
 			<groupId>a_vcard.android</groupId>
 			<artifactId>a_vcard</artifactId>
 			<version>1.4</version>

@@ -14,16 +14,9 @@
     http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd"
 	default-autowire="byName">
 
-	<bean
-		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-		<property name="alwaysUseFullPath" value="true" />
-	</bean>
-	<bean
-		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-		<property name="alwaysUseFullPath" value="true" />
-	</bean>
+	<tx:annotation-driven proxy-target-class="true" />
 	<context:annotation-config />
-
+		
 	<bean
 		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
 		<property name="targetObject">
@@ -48,7 +41,7 @@
 
 	<!-- Scan components for annotations within the configured package -->
 	<context:component-scan base-package="com.cognicap" />
-	
+
 	<mongo:mongo id="mongo" host="localhost" port="27017" />
 
 	<!-- Factory bean that creates the Mongo instance <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean"> 
