@@ -16,7 +16,7 @@
 
 	<tx:annotation-driven proxy-target-class="true" />
 	<context:annotation-config />
-		
+
 	<bean
 		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
 		<property name="targetObject">
@@ -43,20 +43,17 @@
 	<context:component-scan base-package="com.cognicap" />
 
 	<mongo:mongo id="mongo" host="localhost" port="27017" />
-
-	<!-- Factory bean that creates the Mongo instance <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean"> 
-		<property name="host" value="localhost" /> </bean> -->
+	<mongo:db-factory dbname="codemy" />
+	<mongo:mapping-converter base-package="com.cognicap.codemy.core.*.repository" id="converter" />
+	<mongo:repositories base-package="com.cognicap.codemy.core.*.repository" />
 
 	<!-- Define the MongoTemplate which handles connectivity with MongoDB -->
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
-		<constructor-arg name="mongo" ref="mongo" />
-		<constructor-arg name="databaseName" value="cognicap" />
+		<constructor-arg ref="mongoDbFactory" />
+		<constructor-arg name="mongoConverter" ref="converter" />
+		<property name="writeResultChecking" value="EXCEPTION" />
 	</bean>
 
-	<mongo:repositories base-package="com.cognicap.codemy.core.*.repository" />
-
-	<!-- Use this post processor to translate any MongoExceptions thrown in 
-		@Repository annotated classes -->
 	<bean
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 

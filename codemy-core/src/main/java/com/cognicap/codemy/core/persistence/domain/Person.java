@@ -1,6 +1,7 @@
 package com.cognicap.codemy.core.persistence.domain;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
@@ -15,6 +16,8 @@ public class Person {
 
 	private String name;
 	private String homeTown;
+
+	@Indexed
 	private int age;
 
 	public Person(String name, int age) {

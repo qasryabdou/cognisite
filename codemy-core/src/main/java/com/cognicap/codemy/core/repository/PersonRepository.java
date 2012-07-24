@@ -6,6 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Order;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 import com.cognicap.codemy.core.persistence.domain.Person;
@@ -27,13 +30,18 @@ public class PersonRepository {
 		List<Person> results = mongoTemplate.findAll(Person.class);
 		logger.info("Total amount of persons: {}", results.size());
 		logger.info("Results Persons: {}");
-		for(Person p: results) {
-			logger.info(""+p);
+		for (Person p : results) {
+			logger.info("" + p);
 		}
 	}
 
 	public List<Person> getAllPersons() {
-		List<Person> results = mongoTemplate.findAll(Person.class);
+		Query query = new Query(Criteria.where("name").is("John"));
+		logger.info("Executing Query: Criteria.where(name).is(John)");
+		query.sort().on("age", Order.DESCENDING);
+		logger.info("Executing query: query.sort().on(age, Order.DESCENDING)");
+		List<Person> results = mongoTemplate.find(query, Person.class);
+		logger.info("Total amount of persons: {}", results.size());
 		return results;
 	}
 
@@ -41,7 +49,7 @@ public class PersonRepository {
 		// get random age between 1 and 100
 		double age = Math.ceil(Math.random() * 100);
 
-		Person p = new Person("John",  (int) age);
+		Person p = new Person("John", (int) age);
 
 		mongoTemplate.insert(p);
 	}
