@@ -81,15 +81,15 @@
 	</bean>
 
 	<bean id="registrationNotifier"
-		class="com.cognicap.site.framework.notifications.RegistrationNotifier">
+		class="com.cognicap.codemy.core.framework.notifications.RegistrationNotifier">
 	</bean>
 
 	<bean id="registrationEmailNotification"
-		class="com.cognicap.site.framework.notifications.RegistrationEmailNotification">
+		class="com.cognicap.codemy.core.framework.notifications.RegistrationEmailNotification">
 		<property name="mailingConfiguration" ref="mailingConfiguration" />
 	</bean>
 
-	<bean id="mailingConfiguration" class="com.cognicap.site.framework.MailingConfiguration">
+	<bean id="mailingConfiguration" class="com.cognicap.codemy.core.framework.MailingConfiguration">
 		<property name="host" value="${mail.host}" />
 		<property name="username" value="${mail.username}" />
 		<property name="password" value="${mail.password}" />
