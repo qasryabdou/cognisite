@@ -19,7 +19,6 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="0" />
 	<meta name="google-site-verification" content="aYbWg3grOwIlNwiznAS3waq2tCkuA4JuGZ39T9ShVYU" />
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/styles.css" />
     <title>Formation pour booster votre carriere - Cognicap</title>
 </head>

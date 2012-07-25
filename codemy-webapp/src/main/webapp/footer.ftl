@@ -55,15 +55,12 @@
         <a target="_blank" href="http://freemarker.org"><img class="centeredImage" src="img/poweredby_big_ffffff.png" alt="Powered by FreeMarker" border="0"></a>&nbsp;
     </p>
 </div>
-<script type="text/javascript" src="js/vendor/modernizr-2.5.3.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript">window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+<script type="text/javascript">window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.js"><\/script>')</script>
 <script type="text/javascript" src="3rdparty/jquery.validate.min.js"></script>
 <script type="text/javascript" src="3rdparty/jquery-ui-1.8.5.custom.min.js"></script>
 
 <!-- scripts concatenated and minified via build script -->
-<script type="text/javascript" src="js/plugins.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/cognisite.js"></script>
 <script>
     var _gaq=[['_setAccount','UA-22247116-1'],['_trackPageview']];
