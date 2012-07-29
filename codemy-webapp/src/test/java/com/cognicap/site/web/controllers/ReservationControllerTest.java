@@ -24,8 +24,6 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mock.web.MockHttpServletRequest;
-import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.servlet.ModelAndView;
@@ -36,7 +34,7 @@ import com.cognicap.codemy.core.framework.Registration;
  * @version $Id$
  * @since 0.9
  */
-@ContextConfiguration(locations = { "classpath:/test-config.xml" })
+@ContextConfiguration(locations = { "classpath:/spring/*.xml " })
 @RunWith(SpringJUnit4ClassRunner.class)
 public class ReservationControllerTest {
 	
@@ -55,13 +53,9 @@ public class ReservationControllerTest {
 	@Test
 	public void testSubmitForm() {
 
-		MockHttpServletRequest request = new MockHttpServletRequest();
-		MockHttpServletResponse response = new MockHttpServletResponse();
-		request.setMethod("GET");
-		
 		ModelAndView mav = null;
 		try {
-			mav = controller.onSubmit(request, response, registration, null);
+			mav = controller.onSubmit(registration, null, null);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

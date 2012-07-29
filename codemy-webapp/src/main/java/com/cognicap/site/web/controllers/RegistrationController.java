@@ -17,14 +17,14 @@
  */
 package com.cognicap.site.web.controllers;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.validation.BindException;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.SimpleFormController;
 
 import com.cognicap.codemy.core.framework.Registration;
 import com.cognicap.codemy.core.framework.notifications.RegistrationNotifier;
@@ -34,8 +34,8 @@ import com.cognicap.codemy.core.framework.notifications.RegistrationNotifier;
  * @since 0.1
  */
 
-@SuppressWarnings("deprecation")
-public class RegistrationController extends SimpleFormController {
+@Controller
+public class RegistrationController {
 
 	/**
 	 * Log4j logger that records events for this class
@@ -45,12 +45,16 @@ public class RegistrationController extends SimpleFormController {
 
 	RegistrationNotifier registrationNotifier;
 
-	@Override
-	protected ModelAndView onSubmit(HttpServletRequest request,
-			HttpServletResponse response, Object command, BindException errors)
-			throws Exception {
+	@RequestMapping(value = "/Registration", method = RequestMethod.GET)
+	protected ModelAndView doGet() {
 
-		Registration registration = (Registration) command;
+		LOGGER.info("New registration page requested.");
+		return new ModelAndView("inscription");
+	}
+	
+	@RequestMapping(value = "/Registration", method = RequestMethod.POST)
+	protected ModelAndView onSubmit(Registration registration, BindingResult result, ModelMap model) {
+
 		LOGGER.info("New registration received." + registration);
 		try {
 			registrationNotifier.publish(registration);
@@ -61,17 +65,17 @@ public class RegistrationController extends SimpleFormController {
 		return new ModelAndView("confirmationReception");
 	}
 
-	@Override
-	protected Object formBackingObject(HttpServletRequest request)
-			throws Exception {
-		Registration command = new Registration();
-		return command;
-	}
-
-	@Override
-	protected boolean isFormSubmission(HttpServletRequest request) {
-		return !request.getParameterMap().isEmpty();
-	}
+//	@Override
+//	protected Object formBackingObject(HttpServletRequest request)
+//			throws Exception {
+//		Registration command = new Registration();
+//		return command;
+//	}
+//
+//	@Override
+//	protected boolean isFormSubmission(HttpServletRequest request) {
+//		return !request.getParameterMap().isEmpty();
+//	}
 
 	public void setRegistrationNotifier(
 			RegistrationNotifier registrationNotifier) {
