@@ -22,7 +22,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<spring.version>3.0.7.RELEASE</spring.version>
 		<spring-security.version>3.0.7.RELEASE</spring-security.version>
-		<tuckey.version>4.0.3</tuckey.version>		
+		<tuckey.version>4.0.3</tuckey.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -320,14 +320,4 @@
 			<version>${spring-security.version}</version>
 		</dependency>
 	</dependencies>
-	<plugin>
-		<!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-compiler-plugin</artifactId>
-		<version>2.3.2</version>
-		<configuration>
-			<source>${jdk.version}</source>
-			<target>${jdk.version}</target>
-		</configuration>
-	</plugin>
 </project>

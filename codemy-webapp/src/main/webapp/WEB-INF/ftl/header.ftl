@@ -3,12 +3,8 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<#assign contextPath ="">
-<#if springMacroRequestContext.getContextPath()=="/">
-	<#assign contextPath="/">
-<#else>
-	<#assign contextPath=springMacroRequestContext.getContextPath()>
-</#if>
+<#assign security=JspTaglibs["http://www.springframework.org/security/tags"] />
+<#assign contextPath=springMacroRequestContext.getContextPath()>
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -111,6 +107,14 @@
                             class="green"
                             name="navLogin">Inscription</a>
 
+                    </li>
+                    <li>
+						<@security.authorize ifNotGranted="ROLE_USER">
+							<a href="${contextPath}/login/"><@spring.message "layout.login"/></a>
+						</@security.authorize>
+						<@security.authorize ifAllGranted="ROLE_USER">
+							${userContext.username} (<a href="${contextPath}/logout"><@fmt.message key="layout.logout"/>)</a>
+						</@security.authorize>
                     </li>
                 </ul>
             </div>
