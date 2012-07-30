@@ -5,13 +5,12 @@
  | Follow us on twitter: @springfuse
  | Template pack-mvc-3-sd:src/main/webapp/WEB-INF/views/login/accessdenied.p.vm.jsp
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"
-%><%@ taglib prefix="tags" tagdir="/WEB-INF/tags"
-%><%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"
-%><%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"
-%><%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"
-%><%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
-%><head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<head>
 	<title><fmt:message key="error.title" /></title>
 </head>
 <body>
