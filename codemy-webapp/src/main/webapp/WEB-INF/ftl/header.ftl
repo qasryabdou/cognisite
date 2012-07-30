@@ -113,7 +113,7 @@
 							<a href="${contextPath}/login/"><@spring.message "layout.login"/></a>
 						</@security.authorize>
 						<@security.authorize ifAllGranted="ROLE_USER">
-							${userContext.username} (<a href="${contextPath}/logout"><@fmt.message key="layout.logout"/>)</a>
+							${userContext.username} (<a href="${contextPath}/logout"><@spring.message "layout.logout"/>)</a>
 						</@security.authorize>
                     </li>
                 </ul>
