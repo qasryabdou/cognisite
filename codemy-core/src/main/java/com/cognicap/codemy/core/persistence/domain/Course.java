@@ -16,13 +16,15 @@ public class Course {
 	
 	@Id
 	private String id;
+
+	private String icon;
 	private String title;
 	private String level;
 	private String format;
 	private String duration;
-	private String obj;
-	private String prereq;
-	private String desc;
+	private String objectif;
+	private String prerequisite;
+	private String description;
 	
 	@DBRef
 	private List<Session> sessions;
@@ -38,74 +40,96 @@ public class Course {
     public Course(){
     	
     }
-	public Course(String title, String desc,List<Session> sessions) {
+	public Course(String title, String description,List<Session> sessions) {
 		super();
 		this.title = title;
-		this.desc = desc;
+		this.description = description;
 		this.sessions=sessions;
 	}
-	public  String getId() {
-		return id;
-	}
+	 public Course(String icon, String title, String level,
+	    		String format, String duration,String objectif, String prerequisite,
+	    		String description){
+	    	this.icon=icon;
+	    	this.title=title;
+	    	this.level=level;
+	    	this.format=format;
+	    	this.duration=duration;
+	    	this.objectif=objectif;
+	    	this.prerequisite=prerequisite;
+	    	this.description=description;
+	    }
+		
+		public String getId() {
+			return id;
+		}
 
-	public void setId(String id) {
-		this.id = id;
-	}
+		public void setId(String id) {
+			this.id = id;
+		}
 
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
+		public String getIcon() {
+			return icon;
+		}
 
-	public String getLevel() {
-		return level;
-	}
+		public void setIcon(String icon) {
+			this.icon = icon;
+		}
 
-	public void setLevel(String level) {
-		this.level = level;
-	}
+		public String getTitle() {
+			return title;
+		}
 
-	public String getFormat() {
-		return format;
-	}
+		public void setTitle(String title) {
+			this.title = title;
+		}
 
-	public void setFormat(String format) {
-		this.format = format;
-	}
+		public String getLevel() {
+			return level;
+		}
 
-	public String getDuration() {
-		return duration;
-	}
+		public void setLevel(String level) {
+			this.level = level;
+		}
 
-	public void setDuration(String duration) {
-		this.duration = duration;
-	}
+		public String getFormat() {
+			return format;
+		}
 
-	public String getObj() {
-		return obj;
-	}
+		public void setFormat(String format) {
+			this.format = format;
+		}
 
-	public void setObj(String obj) {
-		this.obj = obj;
-	}
+		public String getDuration() {
+			return duration;
+		}
 
-	public String getPrereq() {
-		return prereq;
-	}
+		public void setDuration(String duration) {
+			this.duration = duration;
+		}
 
-	public void setPrereq(String prereq) {
-		this.prereq = prereq;
-	}
+		public String getObjectif() {
+			return objectif;
+		}
 
-	public String getDesc() {
-		return desc;
-	}
+		public void setObjectif(String objectif) {
+			this.objectif = objectif;
+		}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
+		public String getPrerequisite() {
+			return prerequisite;
+		}
 
-	
+		public void setPrerequisite(String prerequisite) {
+			this.prerequisite = prerequisite;
+		}
+
+		public String getDescription() {
+			return description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+		
+		
 }
