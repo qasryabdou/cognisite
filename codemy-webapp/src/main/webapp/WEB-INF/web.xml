@@ -6,14 +6,10 @@
 	<description>Site Web Cognicap</description>
 	<display-name>Cognicap</display-name>
 
-	<context-param>
-		<param-name>defaultHtmlEscape</param-name>
-		<param-value>true</param-value>
-	</context-param>
-	
 	<filter>
 		<filter-name>encodingFilter</filter-name>
-		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
 		<init-param>
 			<param-name>encoding</param-name>
 			<param-value>UTF-8</param-value>
@@ -27,7 +23,36 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
+
+	<filter>
+		<description><![CDATA[
+			Let springsecurity block/redirect/pass depending on configuration
+ 		]]></description>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/c/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	<filter>
+		<description><![CDATA[
+			Convert posted method parameters into HTTP method, since browsers currently only support GET and POST.
+		]]></description>
+		<filter-name>httpMethodFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>httpMethodFilter</filter-name>
+		<url-pattern>/c/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
 	<filter>
 		<filter-name>UrlRewriteFilter</filter-name>
 		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter
@@ -54,18 +79,21 @@
 		<url-pattern>/*</url-pattern>
 		<dispatcher>REQUEST</dispatcher>
 	</filter-mapping>
-
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:spring/*.xml</param-value>
+		<param-value>classpath*:spring/*Context.xml</param-value>
 	</context-param>
-
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
 	<listener>
 		<listener-class>freemarker.ext.jsp.EventForwarding</listener-class>
+	</listener>
+	<listener>
+		<description>Clean logout upon session expiration</description>
+		<listener-class>org.springframework.security.web.session.HttpSessionEventPublisher
+		</listener-class>
 	</listener>
 
 	<servlet>
@@ -75,7 +103,7 @@
 		<load-on-startup>0</load-on-startup>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath*:spring/*.xml</param-value>
+			<param-value>classpath*:spring/*-servlet.xml</param-value>
 		</init-param>
 	</servlet>
 
