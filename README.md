@@ -9,8 +9,7 @@ Eclipse:
 
 Maven+Cargo:  
 1. mvn clean verify org.codehaus.cargo:cargo-maven2-plugin:run  
-2. Go get a coffee (downloads...)  
+2. Go get a coffee (downloads....)  
 
 Point your browser to [http://localhost:8080/cognicap.com/][]
 [http://localhost:8080/cognicap.com/]:http://localhost:8080/cognicap.com/
-
