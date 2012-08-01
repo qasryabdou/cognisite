@@ -1,0 +1,503 @@
+/**** NAV ***/
+#navWrap {
+    float: center;
+    display: inline;
+    margin: -2px 0 0 0;
+    width: 600px;
+}
+
+#navWrap ul {
+    position: relative;
+    z-index: 999;
+    float: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#navWrap ul li {
+    position: relative;
+    float: left;
+    display: inline;
+    margin: 5px 0 0 5px;
+}
+
+#navWrap ul li:hover,#navWrap ul li.currentPage {
+    float: left;
+    display: inline;
+    margin: 5px 0 0 1px;
+    padding: 0 0 0 4px;
+}
+
+#navWrap ul li a {
+    float: left;
+    display: inline;
+    text-decoration: none;
+    font: normal 16px/ 30px Arial, Verdana, Helvetica, sans-serif;
+    color: #fff;
+    padding: 0 0 10px 0;
+    text-align: center;
+}
+
+#navWrap ul li a:hover {
+    float: left;
+    display: inline;
+    color: #fff;
+}
+
+#navWrap ul li a.green {
+    float: left;
+    display: inline;
+    text-decoration: none;
+    font: normal 16px/ 30px Arial, Verdana, Helvetica, sans-serif;
+    color: #b6e595;
+}
+
+#navWrap ul li a.green:hover {
+    float: left;
+    display: inline;
+    color: #fff;
+}
+
+#navFeatures {
+    width: 100px;
+    height: 30px;
+}
+
+#navWrap ul li:hover a#navFeatures,#navFeatures :hover,#navFeatures.currentPage
+{
+    color: #009ddf
+}
+
+#navPricing {
+    width: 100px;
+    height: 30px;
+}
+
+#navWrap ul li:hover a#navPricing,#navPricing :hover,#navPricing.currentPage
+{
+    color: #009ddf
+}
+
+#navSupport {
+    width: 100px;
+    height: 30px;
+}
+
+#navWrap ul li:hover a#navSupport,#navSupport :hover,#navSupport.currentPage
+{
+    color: #009ddf;
+}
+
+#navAbout {
+    width: 100px;
+    height: 30px;
+}
+
+#navWrap ul li:hover a#navAbout,#navAbout :hover,#navAbout.currentPage {
+    color: #009ddf;
+}
+
+#navBlog {
+    width: 100px;
+    height: 30px;
+}
+
+#navWrap ul li:hover a#navBlog,#navBlog :hover,#navBlog.currentPage {
+    color: #009ddf;
+}
+
+#navSignup {
+    width: 100px;
+    height: 30px;
+}
+
+#navWrap ul li:hover a#navSignup,#navSignup :hover,#navSignup.green.currentPage
+{
+    color: #009ddf;
+}
+
+#navLogin {
+    font: bold 20px/ 26px Arial, Helvetica, Verdana, sans-serif;
+    width: 100px;
+}
+
+#navWrap ul li:hover a#navLogin,#navLogin :hover,#navLogin.green.currentPage
+{
+    font: bold 20px Arial, Helvetica, Verdana, sans-serif;
+    color: #009ddf;
+    height: 30px;
+}
+
+/**** SUB-NAV ***/
+#navWrap ul ul {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 35px;
+    left: -25px;
+    background-color: #009ddf;
+    padding: 0 20px 10px 0;
+    margin: 0;
+    -moz-opacity: .94;
+    -ms-filter: "alpha(opacity=94)";
+    opacity: 94;
+    z-index: 200;
+}
+html>body #navWrap ul ul {
+    z-index: 999;
+    top: 37px;
+    left: -25px;
+}
+
+* html #navWrap ul ul {
+    background-color: #009ddf;
+}
+
+#navWrap #lastNav {
+    left: 0px;
+}
+
+#navWrap ul ul li {
+    padding: 0;
+    clear: both;
+    width: 183px;
+}
+
+#navWrap ul ul li.sub {
+    padding: 0;
+    clear: both;
+    width: 183px;
+}
+html>body #navWrap ul ul li.sub {
+    padding: 0;
+    clear: both;
+    width: 200px;
+}
+
+#navWrap ul ul li a {
+    float: left;
+    display: inline;
+    clear: both;
+    text-transform: none;
+    border: none;
+    text-align: left;
+    text-decoration: none;
+    font: normal 14px/ 26px Arial, Verdana, Helvetica, sans-serif;
+    color: #fff !important;
+    padding: 0 0 0 10px;
+    margin: 0;
+    position: relative;
+}
+
+* html #navWrap ul ul li a {
+    margin-left: 0;
+}
+
+#navWrap ul ul li.sub a,#navWrap ul ul li.sub a:link,#navWrap ul ul li.sub a:active,#navWrap ul ul li.sub a:visited
+{
+    float: left;
+    display: inline;
+    clear: both;
+    text-transform: none;
+    border: none;
+    text-decoration: none;
+    background-color: #009ddf;
+    font: normal 12px/ 26px Arial, Verdana, Helvetica, sans-serif !important;
+    color: #fff !important;
+    padding: 0 0 0 32px;
+    margin: 0;
+}
+
+#navWrap ul ul li.active {
+    background-color: #009ddf;
+    color: #fff !important;
+    width: 183px;
+}
+
+#navWrap ul ul li a:hover {
+    background-color: #009ddf;
+    color: #fff !important;
+    width: 183px;
+    margin: 10px;
+    padding-right: 20px;
+}
+
+* html #navWrap ul ul li a.active,* html #navWrap ul ul li a:hover {
+    width: 183px;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#navWrap ul ul li.sub a:hover {
+    background-color: #009ddf;
+    color: #fff !important;
+    padding: 0 0 0 32px;
+    margin: 0;
+}
+
+#navWrap ul li.active ul {
+    display: inline;
+}
+
+#navWrap ul li.active ul ul {
+    display: none;
+}
+
+#navWrap ul li.active li.active ul {
+    display: inline;
+}
+
+#navWrap ul li.active li.active ul ul {
+    display: none;
+}
+
+#navWrap ul li.active li.active li.active ul {
+    display: inline;
+}
+
+#navWrap ul ul ul {
+    width: 183px;
+    left: 178px;
+    top: -10px;
+}
+
+#navWrap ul li.active ul {
+    display: inline;
+}
+
+#navWrap ul li.active li a {
+    width: 183px;
+    background: none;
+    color: #113f71;
+}
+
+#navWrap ul li.active li.active a {
+    background: none;
+    color: #fff;
+}
+
+#navWrap ul li.active li.parent {
+    background: none;
+}
+
+#navWrap ul li.active li.parent:hover,#navWrap ul li.active li.both {
+    background-color: #009ddf;
+    color: #fff;
+}
+
+#navWrap ul li.active li.active li.parent {
+    background: none;
+}
+
+#navWrap ul li.active li.active li.parent:hover,#navWrap ul li.active li.active li.both
+{
+    background-color: #009ddf;
+    color: #fff;
+}
+
+#navWrap ul li.active li.active li.both a {
+    color: #fff;
+}
+
+#navWrap ul li.active li.active li.active ul ul {
+    display: none;
+}
+
+#navWrap ul li.active li.active li.active li.active ul {
+    display: inline;
+}
+
+#slider {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    width: 810px;
+    height: 375px;
+    margin: 0;
+}
+
+#slider .slides {
+	width: 6000px;
+    position: absolute;
+    height: 375px;
+    margin: 0 0 0 0px;
+    left: 0px;
+}
+
+#slider .features {
+    width: 969px;
+    float: left;
+}
+
+#slider .mainCopy {
+    position: relative;
+    z-index: 1;
+    float: left;
+    display: inline;
+    width: 370px;
+    margin: 10px 60px 0 0;
+}
+
+#slider .mainCopy h3 {
+    font: bold 20px/ 26px Arial, Helvetica, Verdana, sans-serif;
+    margin: 5px 0 0 10px;
+}
+
+#slider .mainCopy p {
+    font: normal 14px/ 20px Arial, Helvetica, Verdana, sans-serif;
+    margin: 5px 0 0 10px;
+}
+
+#slider .mainCopy a {
+    text-decoration: underline;
+    font: bold 14px/ 20px Arial, Helvetica, Verdana, sans-serif;
+}
+
+#slider .mainCopy img {
+    float: left;
+    display: inline;
+    margin: 0 0 5px 0;
+}
+
+.mainCopy .trialButton {
+    float: left;
+    display: inline;
+    margin: 15px 0 0 8px;
+    width: 167px;
+    height: 41px;
+    overflow: hidden;
+}
+
+.mainCopy .trialButton a {
+    float: left;
+    display: inline;
+    margin: 0 50px 0 0;
+}
+
+.mainCopy .trialButton a:hover {
+    float: left;
+    display: inline;
+    margin: -41px 10px 0 0;
+}
+
+.mainCopy .demoButton {
+    float: left;
+    display: inline;
+    margin: 15px 0 0 8px;
+    width: 167px;
+    height: 41px;
+    overflow: hidden;
+}
+
+.mainCopy .demoButton a {
+    float: left;
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+.mainCopy .demoButton a:hover {
+    float: left;
+    display: inline;
+    margin: -41px 10px 0 0;
+}
+
+/**** COBRAND ***/
+#slider .clientPics {
+    position: relative;
+    z-index: 975;
+    float: left;
+    display: inline;
+    width: 520px;
+    margin: 20px 0 0 7px;
+}
+
+#slider .cobrandLogo {
+    position: absolute;
+    top: 85px;
+    left: 20%;
+    width: 240px;
+    background: #fff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 5px #333;
+    float: left;
+    display: inline;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+#slider .cobrandLogo img {
+    margin: -10px auto 0 auto;
+}
+
+#slider .cobrandLogo p {
+    font: normal 14px/ 22px Arial, Helvetica, Verdana, sans-serif;
+    color: #666;
+}
+
+#photoBackground {
+    position: absolute;
+    top: 0;
+    left: 427px;
+    width: 542px;
+    height: 388px;
+}
+
+#photoBackground img {
+    position: relative;
+    z-index: 2;
+}
+
+#sliderNav {
+    clear: both;
+    position: relative;
+    z-index: 400;
+    margin: -100px 0 0 50px;
+    width: 350px;
+    height: 120px;
+}
+
+#sliderNav .slide1 a {
+    float: left;
+    display: inline;
+    margin: 0 0 0 0;
+    width: 90px;
+    height: 70px;
+    background: url(../img/clientSliderNavLightBlue.png) no-repeat 0 0;
+}
+
+#sliderNav .slide1 a:hover,#sliderNav .slide1 a.active {
+    height: 90px;
+	background: url(../img/clientSliderNavLightBlue.png) no-repeat 0 -70px;
+}
+
+#sliderNav .slide2 a {
+    float: left;
+    display: inline;
+    margin: 0 0 0 0;
+    width: 90px;
+    height: 70px;
+    background: url(../img/clientSliderNavLightBlue.png) no-repeat -110px 0;
+}
+
+#sliderNav .slide2 a:hover,#sliderNav .slide2 a.active {
+    height: 90px;
+	background: url(../img/clientSliderNavLightBlue.png) no-repeat -110px -70px;
+}
+
+#sliderNav .slide3 a {
+    float: left;
+    display: inline;
+    margin: 0 0 0 0;
+    width: 90px;
+    height: 70px;
+    background: url(../img/clientSliderNavLightBlue.png) no-repeat -225px 0;
+}
+
+#sliderNav .slide3 a:hover,#sliderNav .slide3 a.active {
+    height: 90px;
+	background: url(../img/clientSliderNavLightBlue.png) no-repeat -225px  -70px;
+}

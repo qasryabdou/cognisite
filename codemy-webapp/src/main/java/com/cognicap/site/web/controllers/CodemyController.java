@@ -17,6 +17,11 @@ public class CodemyController {
 		return new ModelAndView("main");
 	}
 
+	@RequestMapping(value = { "/new" }, method = RequestMethod.GET)
+	public ModelAndView letsDoIt() {
+		return new ModelAndView("index");
+	}
+
 	@RequestMapping(value = { "/About" }, method = RequestMethod.GET)
 	public ModelAndView about() {
 		return new ModelAndView("about");

@@ -28,7 +28,7 @@
 	<script type="text/javascript" src="${contextPath}/static/3rdparty/jquery-ui-1.8.5.custom.min.js"></script>
 	
 	<!-- scripts concatenated and minified via build script -->
-	<script type="text/javascript" src="${contextPath}/static/js/cognisite.js"></script>
+	<script type="text/javascript" src="${contextPath}/static/js/codemy.js"></script>
 	<script>
 	    var _gaq=[['_setAccount','UA-22247116-1'],['_trackPageview']];
 	    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
@@ -52,7 +52,8 @@
             </div>
             <div id="navWrap">
                 <ul>
-                    <li class="parent"><a
+                    <li class="parent">
+                    	<a
                             href="Trainings"
                             title="Booste ta carrcarri&egrave;re avec Cognicap"
                             id="navFeatures"

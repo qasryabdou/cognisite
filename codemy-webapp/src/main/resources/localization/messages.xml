@@ -3,12 +3,19 @@
 <properties>
 	<comment>default application resource</comment>
 	<!-- Layout -->
-	<entry key="layout.logout">Logout</entry>
+	<entry key="layout.welcome">Cognicap Trainings, we boost your career!</entry>
+	<entry key="layout.logout">Sign Out!</entry>
 	<entry key="layout.login">Login</entry>
+	<entry key="layout.getin">Get in!</entry>
+	<entry key="layout.register">Join In!</entry>
 	<entry key="layout.quickstart">Quickstart</entry>
 	<entry key="layout.all.rights.reserved">All rights reserved</entry>
 	<entry key="layout.privacy.policy">Privacy policy</entry>
 
+	<!-- Navigation Menus -->
+	<entry key="nav-menu.about">About</entry>
+	<entry key="nav-menu.alltraining">Browse all trainings!</entry>
+	
 	<!-- Error -->
 	<entry key="error.title">Error</entry>
 	<entry key="error.access.denied">You do not have enough privilege to access this resource.</entry>
