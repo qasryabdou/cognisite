@@ -6,15 +6,20 @@
 	<entry key="layout.welcome">Cognicap Trainings, we boost your career!</entry>
 	<entry key="layout.logout">Sign Out!</entry>
 	<entry key="layout.login">Login</entry>
-	<entry key="layout.getin">Get in!</entry>
+	<entry key="layout.getin">Boost it!</entry>
 	<entry key="layout.register">Join In!</entry>
 	<entry key="layout.quickstart">Quickstart</entry>
 	<entry key="layout.all.rights.reserved">All rights reserved</entry>
 	<entry key="layout.privacy.policy">Privacy policy</entry>
+	<entry key="layout.headline">Booste ta carrière avec une formation JAVA chez des professionnels!</entry>
+	<entry key="layout.shortline">Nos formations, la clef de votre réussite!</entry>
 
 	<!-- Navigation Menus -->
 	<entry key="nav-menu.about">About</entry>
 	<entry key="nav-menu.alltraining">Browse all trainings!</entry>
+	<entry key="nav-menu.createtraining">Create your training or school!</entry>
+	<entry key="nav-menu.posttraining">Start a training group request!</entry>
+	<entry key="nav-menu.searchfieldlabel">Search it all..</entry>
 	
 	<!-- Error -->
 	<entry key="error.title">Error</entry>

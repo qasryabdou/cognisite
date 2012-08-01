@@ -42,7 +42,7 @@
 					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
 					class="icon-bar"></span> <span class="icon-bar"></span>
 				</a> 
-				<a class="brand" href="Trainings"><@spring.message "nav-menu.alltraining"/></a>
+				<a class="brand" href="#">Cognicap</a>
 				<div class="btn-group pull-right">
 					<@security.authorize ifNotGranted="ROLE_USER">
 						<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -66,6 +66,9 @@
 				</div>
 				<div class="nav-collapse">
 					<ul class="nav">						
+						<li class="active"><a href="Trainings"><@spring.message "nav-menu.alltraining"/></a></li>
+						<li class="active"><a href="NewTraining"><@spring.message "nav-menu.createtraining"/></a></li>
+						<li class="active"><a href="NewTraining"><@spring.message "nav-menu.posttraining"/></a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
 									data-toggle="dropdown"><@spring.message "nav-menu.about"/><b class="caret"></b></a>
 							<ul class="dropdown-menu">
@@ -76,6 +79,9 @@
 								<li><a href="Ourstudio">Comment venir?</a></li>
 							</ul>
 						</li>
+						<form class="navbar-search pull-left" action="">
+							<input class="search-query span2" type="text" placeholder="<@spring.message "nav-menu.searchfieldlabel"/>">
+						</form>						
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -89,8 +95,8 @@
 			</div>
 			<div class="span8">
 				<header class="jumbotron subhead" id="overview">
-					<h2>Booste ta carri&egrave;re avec une formation <span class="contact">JAVA</span> chez des professionnels!&nbsp;&nbsp;</h2>
-					<p class="lead">Nos formations, la clef de votre r&eacute;ussite!</p>			
+					<h2><@spring.message "layout.headline"/></h2>
+					<p class="lead"><@spring.message "layout.shortline"/></p>			
 				</header>
 			</div>
 		</div>
@@ -161,70 +167,46 @@
 			<div class="span3">
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">Sidebar</li>
-						<li class="active"><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li class="nav-header">Sidebar</li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li class="nav-header">Sidebar</li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
-						<li><a href="#">Link</a></li>
+						<li class="nav-header">Active training!</li>
+						<li class="active"><a href="#">Java Preparation certification, Rabat</a></li>
+						<li><a href="#">JEE, Web component developer, Rabat</a></li>
+						<li><a href="#">Android, Rabat</a></li>
+						<li><a href="#">HTML5, Tanger</a></li>
+						<li><a href="#">More active training...</a></li>
+						<li class="nav-header">Pending groups!</li>
+						<li><a href="#">Link</a>Weblogic, Casablanca</li>
+						<li><a href="#">Link</a>UML, Rabat</li>
+						<li><a href="#">Link</a>Scala, Casablanca</li>
+						<li><a href="#">More pending groups...</a></li>
+						<li class="nav-header">Latest Tutorials...</li>
+						<li><a href="#">Spring MVC</a></li>
+						<li><a href="#">Spring Webflow JSF Integration</a></li>
+						<li><a href="#">HTML5</a></li>
+						<li><a href="#">JQuery</a></li>
+						<li><a href="#">More tutorials...</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="row-fluid">
-			<div class="span12">
-				<!-- Masthead ================================================== -->
-				<div class="subnav">
-					<ul class="nav nav-pills">
-						<li><a href="#typography">Typography</a></li>
-						<li><a href="#navbar">Navbar</a></li>
-						<li><a href="#buttons">Buttons</a></li>
-						<li><a href="#forms">Forms</a></li>
-						<li><a href="#miscellaneous">Miscellaneous</a></li>
-					</ul>
-				</div>	
-			</div>
+			<!-- Masthead ================================================== -->
+			<h1>Boost your self, join a training</h1>
+			<p class="lead">Search for training, enrol, Meet new people, share</p>
+			<div class="subnav">
+				<ul class="nav nav-pills">
+					<li><a href="#typography">Create your training</a></li>
+					<li><a href="#navbar">Post a training request</a></li>
+					<li><a href="#buttons">Start a group training, look for a trainer and get discount</a></li>
+					<li><a href="#forms">Search for tutorials</a></li>
+					<li><a href="#miscellaneous">Be social! Post a tutorial!</a></li>
+				</ul>
+			</div>	
 		</div>
-		<div class="span12">&nbsp;</div>
 	</div>				
 	<div class="container-fluid">
 		<section id="global">
 			<div class="row-fluid">
-				<div class="span3">
-					<div class="well sidebar-nav">
-						<ul class="nav nav-list">
-							<li class="nav-header">Sidebar</li>
-							<li class="active"><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li class="nav-header">Sidebar</li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li class="nav-header">Sidebar</li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-						</ul>
-					</div>
-					<!--/.well -->
-				</div>
-				<!--/span-->
-				<div class="span9">
+				<div class="span12">
 					<div class="hero-unit">
 						<p>
 							<a class="btn btn-primary btn-large">Learn more &raquo;</a>
