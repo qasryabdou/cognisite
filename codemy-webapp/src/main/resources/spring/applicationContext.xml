@@ -58,7 +58,7 @@
 	</bean>
 
 	<mongo:mongo id="mongo" host="localhost" port="27017" />
-	<mongo:db-factory dbname="codemy" />
+	<mongo:db-factory dbname="cognicap" />
 	<mongo:mapping-converter base-package="com.cognicap.codemy.core.*.repository" id="converter" />
 	<mongo:repositories base-package="com.cognicap.codemy.core.*.repository" />
 
