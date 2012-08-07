@@ -24,5 +24,16 @@ public class SessionServiceImpl implements SessionService{
 		return sessionRepository.getAllSessions(courseId);
 	}
 	
+	public List<Session> getSessionsByTitle(String courseTitle) {
+		
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
+				"applicationContext.xml");
+
+		SessionRepository sessionRepository = context
+				.getBean(SessionRepository.class);
+		
+		return sessionRepository.getAllSessionsByTitle(courseTitle);
+	}
+	
 
 }

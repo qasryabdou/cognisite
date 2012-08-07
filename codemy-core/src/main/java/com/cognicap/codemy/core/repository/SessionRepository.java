@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 import com.cognicap.codemy.core.persistence.domain.Course;
@@ -35,6 +37,11 @@ public class SessionRepository {
 
 	public List<Session> getAllSessions(String courseId) {
 		Course course =mongoTemplate.findById(courseId, Course.class);
+		return course.getSessions();
+	}
+	public List<Session> getAllSessionsByTitle(String title) {
+		Course course = mongoTemplate.findOne(new Query(Criteria.where("title")
+				.is(title)), Course.class);
 		return course.getSessions();
 	}
 

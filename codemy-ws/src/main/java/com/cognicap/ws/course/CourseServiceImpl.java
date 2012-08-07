@@ -2,6 +2,7 @@ package com.cognicap.ws.course;
 
 import java.util.List;
 
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 import org.springframework.context.ConfigurableApplicationContext;
@@ -22,6 +23,27 @@ public class CourseServiceImpl implements CourseService{
 				.getBean(CourseRepository.class);
 		
 		return courseRepository.getAllCourses();
+	}
+	
+	public Course getCourse(String id) {
+		
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
+				"applicationContext.xml");
+
+		CourseRepository courseRepository = context
+				.getBean(CourseRepository.class);
+		
+		return courseRepository.getCourse(id);
+	}
+
+	public Course getCourseByTitle(@WebParam(name = "title") String title) {
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
+				"applicationContext.xml");
+
+		CourseRepository courseRepository = context
+				.getBean(CourseRepository.class);
+		
+		return courseRepository.getCourseByTitle(title);
 	}
 	
 

@@ -10,4 +10,5 @@ import com.cognicap.codemy.core.persistence.domain.Session;
 @WebService
 public interface SessionService {
 	public List<Session> getSessions(@WebParam(name="courseId") String courseId);
+	public List<Session> getSessionsByTitle(@WebParam(name="courseTitle") String courseTitle);
 }
