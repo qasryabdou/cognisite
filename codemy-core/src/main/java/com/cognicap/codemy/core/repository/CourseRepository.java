@@ -34,6 +34,13 @@ public class CourseRepository {
 		}
 	}
 
+	public List<Course> searchCourses(String keyWord, int limit) {
+		List<Course> results = mongoTemplate.find(
+				new Query(Criteria.where("title").regex(
+						"^.*" + keyWord.trim() + ".*$", "i")).limit(limit), Course.class);
+		return results;
+	}
+
 	public List<Course> getAllCourses() {
 		List<Course> results = mongoTemplate.findAll(Course.class);
 		return results;
