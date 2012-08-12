@@ -2,6 +2,7 @@ package com.cognicap.codemy.core.persistence.domain;
 
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 import org.springframework.data.annotation.Id;
@@ -12,6 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * 
  */
 @Document
+@XmlRootElement(name="Course")
 public class Course {
 	
 	@Id
