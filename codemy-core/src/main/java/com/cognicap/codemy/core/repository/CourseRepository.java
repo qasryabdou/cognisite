@@ -46,9 +46,14 @@ public class CourseRepository {
 		return results;
 	}
 
-	public Course getCourse(Long id) {
+	public Course getCourse(String id) {
 		Course course = mongoTemplate.findOne(new Query(Criteria.where("id")
 				.is(id)), Course.class);
+		return course;
+	}
+	public Course getCourseByTitle(String title) {
+		Course course = mongoTemplate.findOne(new Query(Criteria.where("title")
+				.is(title)), Course.class);
 		return course;
 	}
 

@@ -53,7 +53,7 @@ public class CourseFormatter implements DiscoverableFormatter<Course> {
         if (isBlank(text)) {
             return new Course();
         }
-        Course course = courseRepository.getCourse(new Long(text));
+        Course course = courseRepository.getCourse(text);
         return course != null ? course : new Course();
     }
 }

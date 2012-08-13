@@ -1,9 +1,12 @@
 package com.cognicap.codemy.core.persistence.domain;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
+@XmlRootElement(name="Seance")
 public class Seance {
 	
 	@Id

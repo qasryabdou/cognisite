@@ -50,18 +50,18 @@ public class CourseServelet extends HttpServlet {
 		
 		//creer et inserer les sessions
 				List<Seance> seances1 = new ArrayList<Seance>();
-				Seance s11=new Seance("jsp", "2012-07-19");
+				Seance s11=new Seance("diag use case", "2012-07-19");
 				seances1.add(s11);
-				Seance s12=new Seance("jsp suite", "2012-07-24");
+				Seance s12=new Seance("diag use case suite", "2012-07-24");
 				seances1.add(s12);
 				seanceRepository.createSeanceCollection();
 				seanceRepository.insertSeance(s11);
 				seanceRepository.insertSeance(s12);
 				
 				List<Seance> seances2 = new ArrayList<Seance>();
-				Seance s21=new Seance("servelet", "2012-09-19");
+				Seance s21=new Seance("diag sequence", "2012-09-19");
 				seances2.add(s21);
-				Seance s22=new Seance("servelet suite", "2012-09-24");
+				Seance s22=new Seance("diag sequence suite", "2012-09-24");
 				seances2.add(s22);
 				seanceRepository.createSeanceCollection();
 				seanceRepository.insertSeance(s21);
@@ -79,7 +79,7 @@ public class CourseServelet extends HttpServlet {
 		sessionRepository.insertSession(s2);
 		
 		//creer et inserer le cours
-		Course p = new Course("java","cours Java",sessions);
+		Course p = new Course("Uml","cours Uml",sessions);
 		courseRepository.createCourseCollection();
 		courseRepository.insertCourse(p);
 		

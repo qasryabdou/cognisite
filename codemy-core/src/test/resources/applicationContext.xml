@@ -15,7 +15,7 @@
     http://www.springframework.org/schema/mvc 
     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
     http://www.springframework.org/schema/data/mongo
-    http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd"
+    http://www.springframework.org/schema/data/mongo/spring-mongo.xsd"
 	default-autowire="byName">
 
     <context:annotation-config />
