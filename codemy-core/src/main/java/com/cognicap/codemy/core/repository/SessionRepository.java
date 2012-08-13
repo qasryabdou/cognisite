@@ -39,7 +39,10 @@ public class SessionRepository {
 		Course course =mongoTemplate.findById(courseId, Course.class);
 		return course.getSessions();
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> b9581f0f830205b06da423634e64002af327a8ed
 	public List<Session> getAllSessionsByTitle(String title) {
 		Course course = mongoTemplate.findOne(new Query(Criteria.where("title")
 				.is(title)), Course.class);
