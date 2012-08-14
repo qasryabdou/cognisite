@@ -74,6 +74,10 @@
 	<script src="${contextPath}/static/3rdparty/bootstrap.min.js"></script>
 	<script src="${contextPath}/static/3rdparty/application.js"></script>
 	<script src="${contextPath}/static/js/codemy.js"></script>
+	<script type="text/javascript" language="javascript"  src="${contextPath}/static/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript"  src="${contextPath}/static/media/js/ZeroClipboard.js"></script>
+	<script type="text/javascript" language="javascript"  src="${contextPath}/static/media/js/TableTools.js"></script>
+	<script type="text/javascript" language="javascript"  src="${contextPath}/static/js/CoursesTable.js"></script>
 	<script type="text/javascript" charset="utf-8">
 		$('#global-search-input').autocomplete({
 			source : '${contextPath}/globalSearchAutoComplete',

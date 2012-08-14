@@ -37,7 +37,14 @@ security=JspTaglibs["http://www.springframework.org/security/tags"] />
 <link href="${contextPath}/static/css/bootstrap-responsive.css"
 	rel="stylesheet">
 <link href="${contextPath}/static/css/docs.css" rel="stylesheet">
-<link rel="stylesheet" href="${contextPath}/static/css/codemy.css" />
+<link href="${contextPath}/static/css/codemy.css"
+	rel="stylesheet" />
+<link rel="stylesheet" href="${contextPath}/static/css/demo_page.css" type="text/css" />
+<link rel="stylesheet" href="${contextPath}/static/css/demo_table.css" type="text/css" />
+<link rel="stylesheet" href="${contextPath}/static/css/demo_table_jui.css" type="text/css" />
+<link rel="stylesheet" href="${contextPath}/static/css/smoothness/jquery-ui-1.8.21.custom.css"  type="text/css" />
+<link rel="stylesheet" href="${contextPath}/static/media/css/TableTools_JUI.css" type="text/css" />
+<link rel="stylesheet" href="${contextPath}/static/css/defaultOverride.css" type="text/css" />
 </head>
 
 <body class="preview" data-offset="50" data-target=".subnav"

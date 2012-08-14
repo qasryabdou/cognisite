@@ -24,12 +24,13 @@ public class Course {
 	private String level;
 	private String format;
 	private String duration;
+	private String niveau;
 	private String objectif;
 	private String prerequisite;
 	private String description;
-	
 	@DBRef
 	private List<Session> sessions;
+
 	
 	@XmlTransient
 	public List<Session> getSessions() {
@@ -48,18 +49,19 @@ public class Course {
 		this.description = description;
 		this.sessions=sessions;
 	}
-	 public Course(String icon, String title, String level,
-	    		String format, String duration,String objectif, String prerequisite,
+	public Course(String icon, String title, String level,
+	    		String format, String duration, String niveau,String objectif, String prerequisite,
 	    		String description){
 	    	this.icon=icon;
 	    	this.title=title;
 	    	this.level=level;
 	    	this.format=format;
 	    	this.duration=duration;
+	    	this.setNiveau(niveau);
 	    	this.objectif=objectif;
 	    	this.prerequisite=prerequisite;
 	    	this.description=description;
-	    }
+	}
 		
 		public String getId() {
 			return id;
@@ -131,6 +133,14 @@ public class Course {
 
 		public void setDescription(String description) {
 			this.description = description;
+		}
+
+		public String getNiveau() {
+			return niveau;
+		}
+
+		public void setNiveau(String niveau) {
+			this.niveau = niveau;
 		}
 		
 		
