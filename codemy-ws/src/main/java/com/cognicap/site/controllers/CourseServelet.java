@@ -70,9 +70,9 @@ public class CourseServelet extends HttpServlet {
 		
 		//creer et inserer les sessions
 		List<Session> sessions = new ArrayList<Session>();
-		Session s1=new Session("2012-07-19","2012-09-19", "Nabil Moursli",seances1);
+		Session s1=new Session("2012-07-19","2012-09-19", "NM",seances1);
 		sessions.add(s1);
-		Session s2=new Session("2012-09-19","2012-11-19", "Nabil Moursli",seances2);
+		Session s2=new Session("2012-09-19","2012-11-19", "NM",seances2);
 		sessions.add(s2);
 		sessionRepository.createSessionCollection();
 		sessionRepository.insertSession(s1);
