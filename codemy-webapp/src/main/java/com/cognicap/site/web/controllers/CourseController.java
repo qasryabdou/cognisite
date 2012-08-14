@@ -43,7 +43,7 @@ public class CourseController {
 	public ModelAndView helloMongo() {
 		
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("formations");
+		mav.setViewName("courses");
 
 		courseService.loadDB();
 		mav.addObject("courses", courseService.getAllCourses());
