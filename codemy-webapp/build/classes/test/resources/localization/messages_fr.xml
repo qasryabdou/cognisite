@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>French translation</comment>
+	<!-- Layout -->
+	<entry key="layout.logout">Se déconnecter</entry>
+	<entry key="layout.login">S'identifier</entry>
+	<entry key="layout.quickstart">Générer un projet</entry>
+	<entry key="layout.all.rights.reserved">Tous droits réservés</entry>
+	<entry key="layout.privacy.policy">Mentions légales</entry>
+
+	<!-- Error -->
+	<entry key="error.title">Erreur</entry>
+	<entry key="error.access.denied">Vous n'avez pas les privilèges suffisants pour accéder à cette resource</entry>
+
+	<!-- CRUD -->
+	<entry key="crud.autocomplete">Autocomplétion</entry>
+	<entry key="crud.deletion.request.confirmation">Êtes-vous sûr de vouloir supprimer cet élément ?</entry>
+	<entry key="crud.deletion.confirmation">Oui, je confirme.</entry>
+	<entry key="crud.edit.button">Éditer</entry>
+	<entry key="crud.create.button">Nouveau</entry>
+	<entry key="crud.delete.button">Supprimer</entry>
+	<entry key="crud.show.button">Visualiser</entry>
+	<entry key="crud.download.button">Télécharger</entry>
+	<entry key="crud.save.button">Sauver</entry>
+	<entry key="crud.list.button">Voir la liste</entry>
+	<entry key="crud.search.button">Rechercher</entry>
+	<entry key="crud.search.empty.result">Aucun résultat</entry>
+	<entry key="crud.namedquery">Recherche nommée</entry>
+	<entry key="crud.search.pattern">Rechercher dans toutes les chaînes</entry>
+	<entry key="crud.search.case.sensitive">Respecter la casse?</entry>
+	<entry key="crud.search.mode">Type de recherche</entry>
+	<entry key="crud.direct.access">Accès direct</entry>
+	<entry key="crud.functionalities.delete">Supprimer</entry>
+	<entry key="crud.functionalities.list">Liste</entry>
+	<entry key="crud.functionalities.show">Lecture</entry>
+	<entry key="crud.functionalities.create">Création</entry>
+	<entry key="crud.functionalities.update">Edition</entry>
+	<entry key="crud.functionalities.search">Recherche par pattern</entry>
+	<entry key="crud.functionalities.example">Recherche par l'exemple</entry>
+	<entry key="crud.functionalities.named.query">Recherche nommée</entry>
+	<entry key="crud.functionalities.ajax">Auto complétion Ajax</entry>
+	<entry key="crud.functionalities.showcase">Exemples</entry>
+
+	<!-- Navigation -->
+	<entry key="navigation.next">Suivant</entry>
+	<entry key="navigation.previous">Précédent</entry>
+	<entry key="navigation.first">Premier</entry>
+	<entry key="navigation.last">Dernier</entry>
+
+	<!-- Search -->
+	<!-- see http://download.oracle.com/javase/6/docs/api/java/text/ChoiceFormat.html -->
+	<entry key="search.total">{0, choice, 0#Aucun résultat|1#Un résultat|1&lt;{0} résultats}</entry>
+	<entry key="search.date.from">Du :</entry>
+	<entry key="search.date.to">... Au :</entry>
+
+	<!-- Enums -->
+	<entry key="SearchMode_ANYWHERE">Contiens</entry>
+	<entry key="SearchMode_EQUALS">Exactement</entry>
+	<entry key="SearchMode_LIKE">Comme</entry>
+	<entry key="SearchMode_STARTING_LIKE">Commançant par</entry>
+	<entry key="SearchMode_ENDING_LIKE">Finissant par</entry>
+
+	<entry key="NullRestrictionKind_SPECIFIED">Comme ...</entry>
+	<entry key="NullRestrictionKind_ANY">Toute valeur</entry>
+	<entry key="NullRestrictionKind_IS_NOT_NULL">Valeurs non nulles seulement</entry>
+	<entry key="NullRestrictionKind_IS_NULL">Valeurs nulles seulement</entry>
+
+	<!-- Misc -->
+	<entry key="ROLE_ADMIN">Administrateur</entry>
+	<entry key="ROLE_USER">Utilisateur</entry>
+
+	<entry key="TRUE">Oui</entry>
+	<entry key="FALSE">Non</entry>
+	<entry key="ANY">Peu importe</entry>
+
+	<!-- Login -->
+	<entry key="login.login.title">Connectez-vous</entry>
+	<entry key="login.tip">Astuce</entry>
+	<entry key="login.tip.database"><![CDATA[
+		Vous pouvez vous identifier avec 		<strong>user/user</strong> ou <strong>admin/admin</strong>.
+	]]></entry>
+	<entry key="login.tip.virtual"><![CDATA[
+		Vous pouvez vous identifier avec <strong>user/user</strong> ou <strong>admin/admin</strong>.<br/>
+		Ce sont des comptes virtuels, merci de consulter la documentation pour apprendre comment utiliser les conventions de Springfuse pour utiliser vos comptes..
+	]]></entry>
+
+	<entry key="login.username">Identifiant</entry>
+	<entry key="login.password">Saisissez votre mot de passe</entry>
+	<entry key="login.rememberme">Mémoriser mes informations sur cet ordinateur.</entry>
+	<entry key="login.unsuccessful">Identifiant ou mot de passe incorrect</entry>
+	<entry key="login.submit">Connexion</entry>
+
+	<!-- Exception caught -->
+	<entry key="exception.caught.title">Une erreur s'est produite.</entry>
+	<entry key="exception.caught.description">Nous l'avons interceptée pour pouvoir l'analyser.</entry>
+	<entry key="exception.caught.spring.mvc"><![CDATA[
+		Cette page est affichée lorsque que l'exception est interceptée par le <strong>exceptionResolver</strong> de Spring MVC.
+	]]></entry>   
+</properties>
