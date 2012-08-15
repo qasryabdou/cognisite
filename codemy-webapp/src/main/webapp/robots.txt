@@ -2,3 +2,9 @@
 # https://developers.google.com/webmasters/control-crawl-index/
 
 User-agent: *
+Disallow: /static/
+
+User-agent: *
+Allow: /
+
+Sitemap: http://www.cognicap.com/sitemap.xml

@@ -6,11 +6,11 @@
 			var integer = $(this).attr('rel');
 			$('#slider .slides').animate({
 				left : -968 * (parseInt(integer) - 1)
-			})
+			});
 			$('#sliderNav a').each(function() {
 				$(this).removeClass('active');
 				if ($(this).hasClass('slide' + integer)) {
-					$(this).addClass('active')
+					$(this).addClass('active');
 				}
 			});
 		});
