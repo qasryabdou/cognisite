@@ -16,6 +16,8 @@
 		<module>codemy-core</module>
         	<module>codemy-ws</module>
         	<module>codemy-webapp</module>
+        	<module>codemy-ws-core</module>
+        	<module>codemy-ws-srv</module>
 	</modules>
 	<build>
 		<finalName>cognicap.com</finalName>

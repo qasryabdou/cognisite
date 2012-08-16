@@ -21,12 +21,13 @@ public class Course {
 
 	private String icon;
 	private String title;
+	private String description;
 	private String level;
 	private String format;
 	private String duration;
 	private String objectif;
 	private String prerequisite;
-	private String description;
+	
 	
 	@DBRef
 	private List<Session> sessions;
