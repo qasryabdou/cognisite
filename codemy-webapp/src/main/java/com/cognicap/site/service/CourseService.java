@@ -38,8 +38,8 @@ public class CourseService {
 	public void loadDB() {
 		// get random int between 1 and 100
 		double i = Math.ceil(Math.random() * 100);
-		courseRepository.dropCourseCollection();
-		courseRepository.insertCourse( new Course("static/img/uml.png","Formation JAVA - Niveau Associé - 1Z0-850"+i,  "level"+i,  "format"+i,"duree"+i,  "niveau"+i,  "objectif"+i, "prereq"+i,  "Cette formations présente:<br/>- Les fondamentaux du concept orienté objet et présentation de la méthode de modélisation UML<br/>- Implémentation JAVA des concepts orienté objet<br/>- Algorithmique et implémentation des programmes en JAVA et les fondamentaux de développement JAVA<br/>- Présentation de quelques technologies client JAVA et présentation de quelques technologies serveur JAVA "+i));
+		//courseRepository.dropCourseCollection();
+		//courseRepository.insertCourse( new Course("static/img/uml.png","Formation JAVA - Niveau Associé - 1Z0-850"+i,  "level"+i,  "format"+i,"duree"+i,  "niveau"+i,  "objectif"+i, "prereq"+i,  "Cette formations présente:<br/>- Les fondamentaux du concept orienté objet et présentation de la méthode de modélisation UML<br/>- Implémentation JAVA des concepts orienté objet<br/>- Algorithmique et implémentation des programmes en JAVA et les fondamentaux de développement JAVA<br/>- Présentation de quelques technologies client JAVA et présentation de quelques technologies serveur JAVA "+i));
 
 	}
 	
