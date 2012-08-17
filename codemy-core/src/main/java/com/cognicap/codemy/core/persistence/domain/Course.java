@@ -28,6 +28,7 @@ public class Course {
 	private String objectif;
 	private String prerequisite;
 	private String description;
+	
 	@DBRef
 	private List<Session> sessions;
 
