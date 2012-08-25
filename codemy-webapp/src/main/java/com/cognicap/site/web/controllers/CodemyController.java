@@ -31,7 +31,9 @@ public class CodemyController {
 
 	@RequestMapping(value = { "/Test" }, method = RequestMethod.GET)
 	public ModelAndView test() {
-		ModelAndView mav = new ModelAndView("test");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("test");
+		courseService.loadDB();
 		mav.addObject("courses", courseService.getAllCourses());
 		return mav;
 	}
