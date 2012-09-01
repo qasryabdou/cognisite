@@ -39,44 +39,6 @@ public class UserRepository {
 		return results;
 	}
 
-	public void insertUserWithRandomInfos() {
-		// get random age between 1 and 100
-		double i = Math.ceil(Math.random() * 100);
-		UserAccount u1 = new UserAccount("Mr.", "firstname", "lastname",
-				"abdou@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "abdou", "password", true, "role");
-		UserAccount u2 = new UserAccount("Mr.", "firstname", "lastname",
-				"anouar@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "anouar", "password", true, "role");
-		UserAccount u3 = new UserAccount("Mr.", "firstname", "lastname",
-				"abdellah@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "abdellah", "password", true, "role");
-		UserAccount u4 = new UserAccount("Mr.", "firstname", "lastname",
-				"nabil@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "nabil", "password", true, "role");
-		UserAccount u5 = new UserAccount("Mr.", "firstname", "lastname",
-				"yassin@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "yassine", "password", true, "role");
-		UserAccount u6 = new UserAccount("Mr.", "firstname", "lastname",
-				"mehdi@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "mehdi", "password", true, "role");
-		UserAccount u7 = new UserAccount("Mlle.", "firstname", "lastname",
-				"sara@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "sara", "password", true, "role");
-		UserAccount u8 = new UserAccount("Mlle.", "firstname", "lastname",
-				"hibat@cognicap.com", "mobile", "comp", "ville", "niveau",
-				"referrant", "hibat", "password", true, "role");
-
-		mongoTemplate.insert(u1);
-		mongoTemplate.insert(u2);
-		mongoTemplate.insert(u3);
-		mongoTemplate.insert(u4);
-		mongoTemplate.insert(u5);
-		mongoTemplate.insert(u6);
-		mongoTemplate.insert(u7);
-		mongoTemplate.insert(u8);
-	}
-
 	public void insertUser(UserAccount u) {
 		mongoTemplate.insert(u);
 	}

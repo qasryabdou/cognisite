@@ -39,8 +39,6 @@ public class UsersService {
 
 		userRepository.createUserCollection();
 
-		//userRepository.insertUserWithRandomInfos();
-
 	}
 
 	public List<UserAccount> getAllUsers() {
