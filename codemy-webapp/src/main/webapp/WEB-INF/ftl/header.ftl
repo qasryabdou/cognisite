@@ -45,6 +45,7 @@ security=JspTaglibs["http://www.springframework.org/security/tags"] />
 <link rel="stylesheet" href="${contextPath}/static/css/smoothness/jquery-ui-1.8.21.custom.css"  type="text/css" />
 <link rel="stylesheet" href="${contextPath}/static/media/css/TableTools_JUI.css" type="text/css" />
 <link rel="stylesheet" href="${contextPath}/static/css/defaultOverride.css" type="text/css" />
+<link rel="stylesheet" href="${contextPath}/static/css/validationEngine.jquery.css" type="text/css" />
 </head>
 
 <body class="preview" data-offset="50" data-target=".subnav"

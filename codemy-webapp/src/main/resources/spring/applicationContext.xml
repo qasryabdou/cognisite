@@ -56,7 +56,27 @@
 		class="com.cognicap.codemy.core.framework.notifications.RegistrationEmailNotification">
 		<property name="mailingConfiguration" ref="mailingConfiguration" />
 	</bean>
+	<bean
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetObject">
+			<ref local="ActivationNotifier" />
+		</property>
+		<property name="targetMethod" value="addObserver" />
+		<property name="arguments">
+			<list>
+				<ref bean="ActivationEmailNotification" />
+			</list>
+		</property>
+	</bean>
 
+	<bean id="ActivationNotifier"
+		class="com.cognicap.codemy.core.framework.activationNotifs.ActivationNotifier">
+	</bean>
+
+	<bean id="ActivationEmailNotification"
+		class="com.cognicap.codemy.core.framework.activationNotifs.ActivationEmailNotification">
+		<property name="mailingConfiguration" ref="mailingConfiguration" />
+	</bean>
 	<mongo:mongo id="mongo" host="localhost" port="27017" />
 	<mongo:db-factory dbname="cognicap" />
 	<mongo:mapping-converter base-package="com.cognicap.codemy.core.*.repository" id="converter" />

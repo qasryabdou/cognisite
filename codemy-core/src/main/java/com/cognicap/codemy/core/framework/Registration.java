@@ -23,15 +23,41 @@ package com.cognicap.codemy.core.framework;
  */
 public class Registration {
 
+	private String civilite;
 	private String nom;
 	private String prenom;
 	private String email;
 	private String mobile;
 	private String compagnie;
 	private String ville;
-	private String cours;
 	private String niveau;
 	private String referrant;
+
+	public Registration() {
+
+	}
+
+	public Registration(String civilite, String nom, String prenom,
+			String email, String mobile, String compagnie, String ville,
+			String niveau, String referrant) {
+		this.civilite = civilite;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.mobile = mobile;
+		this.compagnie = compagnie;
+		this.ville = ville;
+		this.niveau = niveau;
+		this.referrant = referrant;
+	}
+
+	public String getCivilite() {
+		return civilite;
+	}
+
+	public void setCivilite(String civilite) {
+		this.civilite = civilite;
+	}
 
 	public String getNom() {
 		return nom;
@@ -81,14 +107,6 @@ public class Registration {
 		this.ville = ville;
 	}
 
-	public String getCours() {
-		return cours;
-	}
-
-	public void setCours(String cours) {
-		this.cours = cours;
-	}
-
 	public String getNiveau() {
 		return niveau;
 	}
@@ -106,10 +124,10 @@ public class Registration {
 	}
 
 	public String toString() {
-		String reg = getNom() + "\n" + getPrenom() + "\n" + getEmail() + "\n"
-				+ getMobile() + "\n" + getCompagnie() + "\n" + getVille()
-				+ "\n" + getCours() + "\n" + getNiveau() + "\n"
-				+ getReferrant() + "\n";
+		String reg = getCivilite() + "\n" + getNom() + "\n" + getPrenom()
+				+ "\n" + getEmail() + "\n" + getMobile() + "\n"
+				+ getCompagnie() + "\n" + getVille() + "\n" + getNiveau()
+				+ "\n" + getReferrant() + "\n";
 		return reg;
 	}
 }

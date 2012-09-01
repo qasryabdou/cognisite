@@ -78,6 +78,9 @@
 	<script src="${contextPath}/static/media/js/ZeroClipboard.js"></script>
 	<script src="${contextPath}/static/media/js/TableTools.js"></script>
 	<script src="${contextPath}/static/js/CoursesTable.js"></script>
+	<script src="${contextPath}/static/js/jquery.js"></script>
+	<script src="${contextPath}/static/js/jquery.validationEngine-fr.js"></script>
+	<script src="${contextPath}/static/js/jquery.validationEngine.js"></script>
 	<script type="text/javascript" charset="utf-8">
 		$('#global-search-input').autocomplete({
 			source : '${contextPath}/globalSearchAutoComplete',
