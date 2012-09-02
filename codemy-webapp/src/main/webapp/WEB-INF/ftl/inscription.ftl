@@ -37,9 +37,12 @@
 					</div>
 					<br />
 					<div class="content">
-						<h3>&nbsp;&nbsp;Information du compte utilisateur</h3>
+						
 						<div class="row-fluid">
-							<div class="span6">
+							<div class="span1">
+							</div>
+							<div class="span5">
+							<h4>Informations du compte utilisateur</h4>
 								<div class="fields">
 									<label for="inscription.login">Login<sup
 										class="requiredstar">*</sup>:
@@ -52,8 +55,6 @@
 										<@form.input class="validate[required,custom[email]] text-input" id="email" path="email"
 										type="text" value="" size="30"/>
 								</div>
-							</div>
-							<div class="span6">
 								<div class="fields">
 									<label for="password">Password<sup
 										class="requiredstar">*</sup>:
@@ -67,11 +68,9 @@
 										name="passwordconf"  type="password" value="" size="30" />
 								</div>
 							</div>
-						</div>
-						<br><br>
-						<h3>&nbsp;&nbsp;Information personnelle</h3>
-						<div class="row-fluid">
+						
 							<div class="span6">
+							<h4>Informations personnelles</h4>
 								<br/>
 								<div class="fields">
 									<input id="civilite1" checked="on" name="civilite" style="vertical-align: middle" type="radio" value="Mr." />Mr.&nbsp;
@@ -90,63 +89,43 @@
 									</label> <@form.input class="validate[required,custom[onlyLetter],length[0,100]] text-input" id="prenom" path="prenom" type="text"
 										value="" size="30" />
 								</div>
-								<div class="entreeformulaire">
-									<div class="entetechamp">
-										<label for="niveau">Quel est ton niveau?<sup
-											class="requiredstar">*</sup>:
-										</label>
-									</div>
-									<div class="fields">
-										<@form.select class="required" id="niveau" path="niveau">
-											<@form.option value="">--Veuillez choisir--</@form.option>
-											<@form.option value="As des notions">As des notions</@form.option>
-											<@form.option value="D&eacute;butant">D&eacute;butant</@form.option>
-											<@form.option value="Confortable">Confortable</@form.option>
-											<@form.option value="Interm&eacute;daire">Interm&eacute;daire</@form.option>
-											<@form.option value="Experiment&eacute;">Experiment&eacute;</@form.option>
-										</@form.select>
-									</div>
-								</div>
 								
-							</div>
-							<div class="span6">
-								<div class="entreeformulaire">
-									<div class="entetechamp">
-										<label for="mobile">T&eacute;l&eacute;phone portable<sup
-											class="requiredstar">*</sup>:
-										</label>
-									</div>
-									<div class="fields">
-										<@form.input class="validate[required,custom[telephone]] text-input" id="mobile" path="mobile"
-											type="text" value="" size="30" />
-									</div>
-								</div>
-								<div class="entreeformulaire">
-									<div class="entetechamp">
-										<label for="ville">Ville<sup class="requiredstar">*</sup>:
-										</label>
-									</div>
-									<div class="fields">
-										<@form.input class="validate[required,custom[noSpecialCaracters],length[0,20]]" id="ville" path="ville" type="text"
-											value="" size="30" />
-									</div>
-								</div>
-								<div class="entreeformulaire">
-									<div class="entetechamp">
-										<label for="compagnie">Compagnie ou &eacute;cole<sup
-											class="requiredstar">*:</label>
-									</div>
-									<div class="fields">
-										<@form.input class="validate[required,custom[noSpecialCaracters],length[0,20]]" id="organization" path="compagnie"
-											class="middle" type="text" value="" size="30" />
-									</div>
-								</div>
-								<div class="entetechamp">
-									<label for="referrant">Comment as-tu entendu parler de
-										nous?<sup class="requiredstar">*</sup>:
+								<div class="fields">
+									<label for="mobile">T&eacute;l&eacute;phone portable<sup
+										class="requiredstar">*</sup>:
 									</label>
+									<@form.input class="validate[required,custom[telephone]] text-input" id="mobile" path="mobile"
+										type="text" value="" size="30" />
 								</div>
 								<div class="fields">
+									<label for="ville">Ville<sup class="requiredstar">*</sup>:
+									</label>
+									<@form.input class="validate[required,custom[noSpecialCaracters],length[0,20]]" id="ville" path="ville" type="text"
+										value="" size="30" />
+								</div>
+								<div class="fields">
+									<label for="compagnie">Compagnie ou &eacute;cole<sup
+										class="requiredstar">*:</label>
+									<@form.input class="validate[required,custom[noSpecialCaracters],length[0,20]]" id="organization" path="compagnie"
+										class="middle" type="text" value="" size="30" />
+								</div>
+								<div class="fields">
+									<label for="niveau">Quel est ton niveau?<sup
+											class="requiredstar">*</sup>:
+									</label>
+									<@form.select class="required" id="niveau" path="niveau">
+										<@form.option value="">--Veuillez choisir--</@form.option>
+										<@form.option value="As des notions">As des notions</@form.option>
+										<@form.option value="D&eacute;butant">D&eacute;butant</@form.option>
+										<@form.option value="Confortable">Confortable</@form.option>
+										<@form.option value="Interm&eacute;daire">Interm&eacute;daire</@form.option>
+										<@form.option value="Experiment&eacute;">Experiment&eacute;</@form.option>
+									</@form.select>
+								</div>
+								<div class="fields">
+								<label for="referrant">Comment as-tu entendu parler de
+										nous?<sup class="requiredstar">*</sup>:
+									</label>
 									<@form.select class="required" id="referrant" path="referrant">
 										<@form.option value="">--Veuillez choisir--</@form.option>
 										<@form.option value="Google">Google</@form.option>
@@ -161,16 +140,12 @@
 										<@form.option value="SokoMaroc">Soko Maroc</@form.option>
 										<@form.option value="Autre">Autre</@form.option>
 									</@form.select>
-								</div>
-								
-									
+								</div>		
 							</div>
-							<br><br><br>
-							<div>
-								<div style="margin-left:760px;">
+							<br><br>
+								<div style="margin-left:400px;">
 									<input value="Je r&eacute;serve!" type="submit" class="btn btn-primary" />
 								</div>
-							</div>
 							<br><br>
 						</div>
 					</div>

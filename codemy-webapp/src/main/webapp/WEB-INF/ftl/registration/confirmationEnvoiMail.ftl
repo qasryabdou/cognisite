@@ -4,8 +4,9 @@
 	<div class ="content-wrapper rounded">
 		<div class="content">
 			<br><br>
-			<h3>Votre demande d'inscription est bien reçue.</h3>
-			<h3>Un lien d'activation est envoy&eacute; &agrave; l'adresse email que vous avez fournie lors de l'inscription.</h3>
+			<p align="center"><img  width="60" height="60" src="${contextPath}/static/img/success.jpg"/></p>
+			<h3 align="center">Votre demande d'inscription est bien re&#231;ue.</h3>
+			<h3 align="center">Un lien d'activation est envoy&eacute; &agrave; l'adresse email que vous avez fournie lors de l'inscription.</h3>
 			<br><br>
 		</div>
 	</div>

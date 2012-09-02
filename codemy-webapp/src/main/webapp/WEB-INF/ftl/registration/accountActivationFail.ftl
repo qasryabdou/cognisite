@@ -3,8 +3,8 @@
 	<div class ="content-wrapper rounded">
 		<div class="content">
 			<br><br>
-			<h3>Echec Lors de L'activation de votre compte.Veuillez r&eacute;&eacute;ssayez plus tard.</h3>
-			<h3>Votre demande n'est pas bien recue.</h3>
+			<p align="center"><img  width="60" height="60" src="${contextPath}/static/img/warning.jpg"/></p>
+			<h3 align="center">Echec Lors de L'activation de votre compte.Veuillez r&eacute;&eacute;ssayez plus tard.</h3>
 			<br><br>
 		</div>
 	</div>

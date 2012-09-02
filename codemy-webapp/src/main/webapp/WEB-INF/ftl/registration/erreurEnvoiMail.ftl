@@ -1,9 +1,13 @@
 <#include "../header.ftl">
 
 <div class="container">
-	<div class="content">
-		<h3>Votre inscription ne s'est pas déroulé correctement.</h3>
-		<h3>Erreur d'envoi d'email</h3>
+	<div class ="content-wrapper rounded">
+		<div class ="content">
+			<br><br>
+			<p align="center"><img  width="60" height="60" src="${contextPath}/static/img/warning.jpg"/></p>
+			<h3 align="center">Votre demande d'inscription n'est pas bien re&#231;ue.</h3>
+			<br><br>
+		</div>
 	</div>
 </div>
 
